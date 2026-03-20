@@ -22,7 +22,7 @@
 > [!Important]
 > Introduzca a continuación su nombre y apellidos:
 >
->> **Oriol López Miret**
+># **Oriol López Miret**
 
 ## Fichero `primos.py`
 
@@ -45,33 +45,33 @@ Incluya en el fichero `primos.py` las tres funciones siguientes:
 - `esPrimo(numero)`   Devuelve `True` si su argumento es primo, y `False` si no lo es.
   - Se debe considerar que `numero` es un número natural y mayor que uno.
   - En caso contrario, la función debe elevar la excepción `TypeError` y finalizar la ejecución.
-    >````python
-    >def esPrimo(numero):
-    >   """
-    >  Devuelve `True` si el numero es primo, y `False` si no lo es.
-    >
-    >   Args:
-    >       numero(int): Numero para evaluar.
-    >
-    >   Returns:
-    >      bool: `True` si es primo o `False` si no lo es.
-    >
-    > Raises:
-    >      TypeError: Si el numero no es entero y mayor a 2.
-    >
-    >   Tests:
-    >      >>> [numero for numero in range(2, 50) if esPrimo(numero)]
-    >      [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
-    >  """
-    >  if numero < 2 or type(numero) != int:
-    >       raise TypeError("Numero | Formato incorrecto,  insertar un numero entero mayor a 1")
-    >   else:
-    >       for num in range(2, numero):
-    >           if numero % num == 0:
-    >               return False
-    >       else:
-    >           return True
-    >`````
+    ````python
+    def esPrimo(numero):
+       """
+      Devuelve `True` si el numero es primo, y `False` si no lo es.
+    
+       Args:
+           numero(int): Numero para evaluar.
+    
+       Returns:
+          bool: `True` si es primo o `False` si no lo es.
+    
+     Raises:
+          TypeError: Si el numero no es entero y mayor a 2.
+    
+       Tests:
+          >>> [numero for numero in range(2, 50) if esPrimo(numero)]
+          [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
+      """
+      if numero < 2 or type(numero) != int:
+           raise TypeError("Numero | Formato incorrecto,  insertar un numero entero mayor a 1")
+       else:
+           for num in range(2, numero):
+               if numero % num == 0:
+                   return False
+           else:
+               return True
+    ``````
 
 - `primos(numero)`    Devuelve una **tupla** con todos los números primos menores que su argumento.
 - `descompon(numero)` Devuelve una **tupla** con la descomposición en factores primos de su argumento.
